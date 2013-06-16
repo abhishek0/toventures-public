@@ -3,6 +3,7 @@
     <title>toVentures</title>
     <link rel="stylesheet" type="text/css" href="style.css">    
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -18,17 +19,30 @@
         <div class="stiches bottom"></div>
     </div>
     <div id="services">
-        <div class="name selected"></div>
-        <div class="name"></div>
-        <div class="name"></div>
+        <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="marketing">
+            <span style="display: block; padding-top:25px;">Digital Marketing</span>
+        </div>
+        <div class="name" data-selectionBar="0deg" data-content="biz-dev">
+            <span style="display: block; padding-top:25px;">Business Development</span>
+        </div>
+        <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="technology">
+            <span style="display: block; padding-top:45px;">Technology</span>
+        </div>
+        <div class="selection_bar"></div>
+        <div id="mainContent">
+            <span class="marketing tagline shown" style="display: table-cell;">
+                We reach out for you to your market so that you can <span class="underline">start getting more customers</span>
+            </span>
+            <span class="biz-dev tagline">
+                We sit down with you to diagnose your existing setup and then <span class="underline">provide you with a business plan to integrate technology and grow</span>
+            </span>
+            <span class="technology tagline">
+                We find all existing pain points in your business where technology can help <span class="underline">and then build you a complete solution</span>
+            </span>
+        </div>
 
-        <div id="temp"></div>
-
-    </div>
-    <div id="message">        
-        
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
 </body>
 </html>
