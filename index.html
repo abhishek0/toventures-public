@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">    
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:500,800' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -11,22 +12,23 @@
         <div class="stiches top"></div>
         
         <div class="header">            
-            <div class="nav-item left selected fake"></div>            
-            <div class="nav-item left selected">What we provide</div>            
+            <div class="left fake"></div>            
+            <div id="services_show" class="nav-item left selected">What we provide</div>            
             
-            <div class="nav-item right">About</div>
+            <div class="right fake"></div>
+            <div id="about_show" class="nav-item right">About</div>
         </div>
         <div class="stiches bottom"></div>
     </div>
-    <div id="services">
+    <div id="services" class="section">
         <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="marketing">
-            <span style="display: block; padding-top:25px;">Digital Marketing</span>
+            <span class="service_name_text">Digital Marketing</span>
         </div>
         <div class="name" data-selectionBar="0deg" data-content="biz-dev">
-            <span style="display: block; padding-top:25px;">Business Development</span>
+            <span class="service_name_text">Business Development</span>
         </div>
         <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="technology">
-            <span style="display: block; padding-top:45px;">Technology</span>
+            <span class="service_name_text">Technology</span>
         </div>
         <div class="selection_bar"></div>
         <div id="mainContent">
@@ -39,9 +41,45 @@
             <span class="technology tagline">
                 We find all existing pain points in your business where technology can help <span class="underline">and then build you a complete solution</span>
             </span>
-        </div>
-
+        </div>        
     </div>
+    <div id="about" class="section" style="display:none;">
+        <div class="content">
+            <div class="virtues">
+                <span class="other-heading">We are <span class="red">Not</span> a web development consultancy&nbsp;!</span>
+                <br /><br /><br /><br /><br />
+                <div class="align other-heading">We are:</div>
+                <div class="img"></div>
+                <div class="desc">
+                    <span class="heading">Experts of technology and its optimal usage.</span><br />
+                    We know that technology can add value to any business new or existing. And we are smart enough to tell you, how you can use that too.
+
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+            <div class="hr"></div>
+            <div class="virtues">
+                <div class="img"></div>
+                <div class="desc">
+                    <span class="heading">Focused people with focused process.</span><br />
+                    We believe in rapid prototyping i.e deliver what the customer needs efficiently and adapt the solution according to business requirements. We are focused towards the customer and hence we make what is needed and not a fixed project mentioned in a contract.
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="hr"></div>
+            <div class="virtues">
+                <div class="img"></div>
+                <div class="desc">
+                    <span class="heading">Passionate people who believe in delivering quality.</span><br />
+                    We do not make just websites. We sit with you, figure out what your business exactly needs and then develop it for you.
+
+                </div>
+            </div>
+            <br /><br /><br /><br /><br />
+        </div>
+    </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>

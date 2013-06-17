@@ -1,13 +1,15 @@
+html
+{
+    overflow-y: scroll;
+}
 body, html
 {
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Spicy Rice', serif;
+    padding: 0;    
     text-align: center;
     background-color: #eae5c7;
     background-repeat: repeat;
-    letter-spacing: 1px;
+    letter-spacing: 1px;    
 }
 #nav
 {
@@ -59,30 +61,37 @@ body, html
     font-family: 'Grand Hotel', cursive;
     /*padding-top: 5px;*/
     top: 5px;
-    text-shadow: 1px 1px 2px #000;    
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
 }
-.nav-item.left
+.left
 {
     left: 0px;
 }
-.nav-item.right
+.right
 {
     right: 0px;
 }
 .nav-item.selected
 {
-    /*color: #024959;
-    background-color: #f2cd5e;   */
     color: #4ecad9;
 }
-.nav-item.selected.fake
+.nav-item.hover
 {
+    color: #4ecad9;
+}
+.fake
+{
+    position: absolute;    
+    width: 240px;    
     height: 38px;
     margin-top: 2px;
     opacity: 0.6;
     border-radius: 8px;
     background-color: rgb(68,99,116);
     box-shadow: inset 0 0 18px #000;
+    top:5px;
+    display: none;
 }
 .nav-item:hover
 {
@@ -103,7 +112,7 @@ body, html
     margin-left: -480px;
     width: 960px;    
     text-align: center;
-    margin-top:100px;    
+    margin-top:7%;    
 }
 #services .name
 {
@@ -116,12 +125,13 @@ body, html
     background-color: rgb(190,190,190);
     opacity: 0.6;    
     margin-top: 20px;
+    cursor: pointer;
 }
 #services .name.selected
 {
     background-color: #4ecad9;
 }
-#services .name.hover
+#services .name:hover
 {
     background-color: #4ecad9;
     color: White;
@@ -153,6 +163,8 @@ body, html
     border-radius: 544px;
     box-shadow: inset 0 0 22px #000;   
     font-family: 'Londrina Solid', cursive;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
 }
 #services .spacer
 {
@@ -175,6 +187,14 @@ body, html
     border-radius: 5px;
     -webkit-transition: -webkit-transform 0.4s;
 }
+#services .service_name_text
+{
+    display: table-cell;
+    width:150px;
+    height: 150px;
+    vertical-align: middle;
+    text-align: center;
+}
 #mainContent .tagline
 {
     padding-left: 20px;
@@ -190,6 +210,85 @@ body, html
 }
 .underline
 {
-    color: #4ecad9;
+    color: #00d4ed;
+    text-shadow: 0px 1px 3px rgb(60,60,60);
+}
+#about
+{
+    text-align: center;
+    padding-top:4%;
+}
+#about .hr
+{
+    width: 100%;
+    height: 3px;
+    margin-top: 50px;
+    border-bottom-style: solid;
+    border-color: rgb(50,50,50);
+    border-bottom-width: 3px;
+    border-radius: 3px;
+
+}
+#about .content
+{
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    width: 960px;
+    font-family: 'Londrina Solid', cursive;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: rgb(50,50,50);
+    text-align: left;
+}
+#about .virtues
+{
+    margin-top: 30px;    
+}
+#about .img
+{
+    float:left;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color: White;
+}
+#about .desc
+{
+    display: table-cell;    
+    height: 150px;
+    vertical-align: middle;
+    text-align: left;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+    padding-left: 90px;    
+    font-weight: 800;
+}
+.heading
+{
+    font-family: 'Grand Hotel', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    /*color: #4ecad9;*/
+    text-shadow: 0px 1px 3px rgb(60,60,60);
+    /*font-weight: 800;*/
+}
+.clear
+{
+    clear: both;
+}
+.other-heading
+{
+    font-size: 28px;
+    font-weight: 800;
+}
+.align
+{
+    display: table-cell;
+    padding-left: 240px; 
+}
+.red
+{
+    color: #f43939;
     text-shadow: 1px 1px 3px #000;
 }

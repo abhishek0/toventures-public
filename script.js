@@ -54,29 +54,25 @@ function rotateSelectionBar(deg)
     })
 }
 
-$(document).ready(function(){
-    /*calculateDistanceInCenters($('#services .name')[1], $('#mainContent'));*/
-    $('#services .name').each(function(){
-        console.log('lallu');
+$(document).ready(function(){    
+    $('#services .name').each(function(){        
         var deg = $(this).data('selectionbar');
         $(this).on('mouseenter',function(){
-            if(!$(this).hasClass('selected')){
-                $(this).addClass('hover');
+            if(!$(this).hasClass('selected')){                
                 rotateSelectionBar(deg);
             }
         });
         $(this).on('mouseleave',function(){
-            if(!$(this).hasClass('selected')){
-                $(this).removeClass('hover');
+            if(!$(this).hasClass('selected')){                
                 rotateSelectionBar($('#services .name.selected').data('selectionbar'));
             }
         });
         $(this).on('click', function(){
             if(!$(this).hasClass('selected')){
                 var content = $(this).data('content');
-                $('#mainContent .tagline.shown').fadeOut(function(){
+                $('#mainContent .tagline.shown').fadeOut(300, function(){
                     $(this).removeClass('shown');
-                    $('#mainContent .tagline.'+content).addClass('shown').css('display', 'table-cell');
+                    $('#mainContent .tagline.'+content).addClass('shown').fadeIn(300).css('display', 'table-cell');
                 });
                 
                 $('#services .name').removeClass('selected').removeClass('hover');
@@ -84,4 +80,38 @@ $(document).ready(function(){
             }
         })
     })
+
+    $('.nav-item.selected').prev().show();
+    $('.nav-item').on('mouseenter', function(){
+        if (!$(this).hasClass('selected')) {
+            $(this).prev().fadeIn(100);
+            $(this).addClass('hover');
+        }
+    }); 
+    $('.nav-item').on('mouseleave', function(){
+        if (!$(this).hasClass('selected')) {
+            $(this).prev().fadeOut(100);
+            $(this).removeClass('hover');
+        }
+    });
+    $('.nav-item').click(function(){
+        $('.nav-item').each(function(){
+            $(this).prev().hide();
+            $(this).removeClass('selected').removeClass('hover');
+        });
+        $(this).prev().show();
+        $(this).addClass('selected');
+    });
+    $('#about_show').click(function(){
+        $('#services').fadeOut(300,function(){
+            $('#about').fadeIn(300);    
+        });
+        
+    });
+    $('#services_show').click(function(){
+        $('#about').fadeOut(300, function(){
+            $('#services').fadeIn(300);
+        });
+        
+    });
 });
