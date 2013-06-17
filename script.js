@@ -105,4 +105,12 @@ $(document).ready(function(){
         });
         
     });
+
+    $('.box').hover(
+        function(){
+            $(this).children('.pattern').animate({'height': '280px'});            
+        }, 
+        function(){
+            $(this).children('.pattern').animate({'height': '50px'});
+        });
 });

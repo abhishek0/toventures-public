@@ -220,8 +220,7 @@ body, html
 }
 #about
 {
-    text-align: center;
-    padding-top:4%;
+    text-align: center;    
 }
 #about .hr
 {
@@ -231,8 +230,7 @@ body, html
     border-bottom-style: solid;
     border-color: rgb(50,50,50);
     border-bottom-width: 3px;
-    border-radius: 3px;
-
+    border-radius: 3px;    
 }
 #about .content
 {
@@ -244,7 +242,8 @@ body, html
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
     color: rgb(50,50,50);
-    text-align: left;
+    margin-top: 80px;
+    /*text-align: left;*/
 }
 #about .virtues
 {
@@ -286,6 +285,7 @@ body, html
 {
     font-size: 28px;
     font-weight: 800;
+    text-shadow: 0px 1px 3px rgb(60,60,60);
 }
 .align
 {
@@ -296,4 +296,89 @@ body, html
 {
     color: #f43939;
     text-shadow: 1px 1px 3px #000;
+}
+.boxes
+{
+    text-align: left;
+    margin-top: 30px;
+}
+.box
+{
+    width: 300px;
+    height: 300px;
+    float: left;
+    z-index:2;   
+
+}
+.box .image
+{
+    top: 0px;
+    height:250px;
+    background-color: White;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: inset 0 0 160px #000;
+    opacity: 0.4;
+}
+.box .font-image
+{
+    margin-top:-227px;
+    font-size: 215px;
+    color: #573232;
+}
+.box .pattern
+{
+    position: absolute;
+    bottom: 0px;
+    width:300px;
+    z-index:1;
+    height:280px;
+    background-image: url('./low_contrast_linen.png');
+    background-repeat: repeat;
+    font-family: 'Dosis', sans-serif;
+    color: White;
+    text-shadow: 0px 1px 3px rgb(60,60,60);
+    text-align: center;    
+    height: 50px;
+    overflow: hidden;  
+}
+.box .heading
+{
+    position: absolute;
+    top:5px;
+    width: 280px;
+    left:10px;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 30px;
+    font-weight: 400;    
+    text-shadow: 0px 1px 3px rgb(60,60,60);
+    text-align: left;
+}
+.box .descr
+{
+    position: absolute;
+    bottom: 0px;
+    text-align: left;
+    width: 280px;    
+    left:10px;
+    font-weight: bold;
+    top:120px;    
+}
+
+
+#logo
+{
+    position: absolute;
+    width: 200px;
+    height: 78px;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 99;
+    background-image: url('woven.png');
+    background-repeat: repeat;
+    opacity: 0.8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 1px 14px #000;
 }
