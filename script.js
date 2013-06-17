@@ -57,29 +57,20 @@ function rotateSelectionBar(deg)
 $(document).ready(function(){    
     $('#services .name').each(function(){        
         var deg = $(this).data('selectionbar');
-        $(this).on('mouseenter',function(){
-            if(!$(this).hasClass('selected')){                
-                rotateSelectionBar(deg);
+        $(this).on('mouseenter',function(){            
+            if($(this).hasClass('selected'))
+            {
+                return;
             }
-        });
-        $(this).on('mouseleave',function(){
-            if(!$(this).hasClass('selected')){                
-                rotateSelectionBar($('#services .name.selected').data('selectionbar'));
-            }
-        });
-        $(this).on('click', function(){
-            if(!$(this).hasClass('selected')){
-                var content = $(this).data('content');
-                $('#mainContent .tagline.shown').fadeOut(300, function(){
-                    $(this).removeClass('shown');
-                    $('#mainContent .tagline.'+content).addClass('shown').fadeIn(300).css('display', 'table-cell');
-                });
+            rotateSelectionBar(deg);
+            $('#services .name').removeClass('selected');
+            $(this).addClass('selected');
+            var content = $(this).data('content');
+            $('#mainContent .tagline').hide();
+            $('#mainContent .tagline.'+content).fadeIn(300).css('display', 'table-cell');            
                 
-                $('#services .name').removeClass('selected').removeClass('hover');
-                $(this).addClass('selected');
-            }
-        })
-    })
+        });        
+    });
 
     $('.nav-item.selected').prev().show();
     $('.nav-item').on('mouseenter', function(){
