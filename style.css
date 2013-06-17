@@ -128,10 +128,9 @@ body, html
     background-color: rgb(150,150,150);    
     box-shadow: 1px 1px 8px #000;
     margin-top: 20px;
-    cursor: pointer;
-    color: rgb(10,10,10);
+    cursor: pointer;    
     box-shadow: 1px 1px 3px rgb(80,80,80);
-    opacity:0.7;
+    opacity:0.6;
 }
 #services .name.selected
 {
@@ -191,7 +190,7 @@ body, html
     border-radius: 5px;
     -webkit-transition: -webkit-transform 0.4s;
     box-shadow: 1px 1px 3px rgb(80,80,80);
-    opacity: 0.7;
+    opacity: 0.6;
 }
 #services .service_name_text
 {
