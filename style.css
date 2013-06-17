@@ -7,9 +7,12 @@ body, html
     margin: 0;
     padding: 0;    
     text-align: center;
-    background-color: #eae5c7;
+    /*background-color: #eae5c7;*/
+    /*background-color: #faf4e6;*/
     background-repeat: repeat;
     letter-spacing: 1px;    
+    background-image: url('./back_pattern.png');
+
 }
 #nav
 {
@@ -20,7 +23,7 @@ body, html
     text-align: center;
     overflow: hidden;
     box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);    
-    background: url('leather_pattern.png');
+    background: url('asli_pattern.png');
     background-repeat: repeat-x;    
 }
 #nav .stiches
@@ -28,7 +31,7 @@ body, html
     position: absolute;    
     width:100%;
     height: 7px;
-    background: url('stich.png');
+    background: url('stich_new.png');
     background-repeat: repeat-x;
 }
 #nav .stiches.bottom
@@ -121,20 +124,24 @@ body, html
     height: 150px;
     border-radius: 95px;
     font-size: 28px;    
-    font-family: 'Grand Hotel', cursive;    
-    background-color: rgb(190,190,190);
-    opacity: 0.6;    
+    font-family: 'Grand Hotel', cursive;        
+    background-color: rgb(150,150,150);    
+    box-shadow: 1px 1px 8px #000;
     margin-top: 20px;
     cursor: pointer;
+    color: rgb(10,10,10);
+    box-shadow: 1px 1px 3px rgb(80,80,80);
+    opacity:0.7;
 }
 #services .name.selected
 {
-    background-color: #4ecad9;
+    /*background-color: #4ecad9;*/
+    background-color: #61d4e7;
 }
 #services .name:hover
 {
-    background-color: #4ecad9;
-    color: White;
+    /*background-color: #4ecad9;*/
+    background-color: #61d4e7;    
 }
 #services .top
 {
@@ -156,12 +163,9 @@ body, html
     top: 50%;
     margin-top: -17em;
     width: 544px;
-    height: 544px;
-    border-style: solid;
-    border-width: 10px;
-    border-color: #8cd5d2;
+    height: 544px;    
     border-radius: 544px;
-    box-shadow: inset 0 0 22px #000;   
+    box-shadow: inset 0 0 65px #0596a7;   
     font-family: 'Londrina Solid', cursive;
     font-family: 'Dosis', sans-serif;
     font-weight: 800;
@@ -176,16 +180,18 @@ body, html
 {
     position: absolute;    
     border-style: solid;
-    border-color: #8cd5d2;    
+    border-color: #61d4e7;    
     border-width: 5px;
     -webkit-transform-origin: right center;    
     z-index: 0;
-    left: 140px;
-    width: 250px;
+    left: 180px;
+    width: 200px;
     top: 50%;
     -webkit-transform: rotate(35deg);
     border-radius: 5px;
     -webkit-transition: -webkit-transform 0.4s;
+    box-shadow: 1px 1px 3px rgb(80,80,80);
+    opacity: 0.7;
 }
 #services .service_name_text
 {
@@ -197,9 +203,9 @@ body, html
 }
 #mainContent .tagline
 {
-    padding-left: 20px;
+    padding-left: 30px;
     height: 544px;
-    width: 500px;
+    width: 483px;
     display: none;    
     vertical-align: middle;
     text-align: center;
@@ -210,7 +216,7 @@ body, html
 }
 .underline
 {
-    color: #00d4ed;
+    color: #4ecad9;
     text-shadow: 0px 1px 3px rgb(60,60,60);
 }
 #about
