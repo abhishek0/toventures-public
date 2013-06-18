@@ -5,6 +5,7 @@
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>    
     <link href='http://fonts.googleapis.com/css?family=Dosis:500,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="animate-custom.css">
 </head>
 
 <body>
@@ -23,13 +24,13 @@
     </div>
     <div id="services" class="section">
         <div class="selection_bar"></div>
-        <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="marketing">
+        <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="marketing" data-icons="digital_marketing_icons">
             <span class="service_name_text">Digital Marketing</span>
         </div>
-        <div class="name" data-selectionBar="0deg" data-content="biz-dev">
+        <div class="name" data-selectionBar="0deg" data-content="biz-dev" data-icons="biz_dev_icons">
             <span class="service_name_text">Business Development</span>
         </div>
-        <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="technology">
+        <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="technology" data-icons="tech_icons">
             <span class="service_name_text">Technology</span>
         </div>
         
@@ -43,7 +44,30 @@
             <span class="technology tagline">
                 We find all existing pain points in your business where technology can help <span class="underline">and then build you a complete solution</span>
             </span>
-        </div>        
+        </div>  
+        <div id="icons">
+            <div class="digital_marketing_icons icon_row">
+                <div class="icon_1" style="background-position: 0px 0px; width: 59px;"></div>
+                <div class="icon_2" style="background-position: 120px 0px; width: 60px;"></div>                
+                <div class="icon_3" style="background-position: 180px 0px; width: 60px;"></div>
+                <div class="icon_4" style="background-position: 60px 0px; width: 60px;"></div>
+                <div class="icon_5" style="background-position: 239px 0px; width: 59px;"></div>
+            </div>
+            <div class="biz_dev_icons icon_row">
+                <div class="icon_1" style="background-position: 0px 0px; width: 65px;"></div>
+                <div class="icon_2" style="background-position: 65px 0px; width: 67px"></div>
+                <div class="icon_3" style="background-position: 135px 0px; width: 65px"></div>
+                <div class="icon_4" style="background-position: 202px 0px; width: 65px"></div>
+                <div class="icon_5" style="background-position: 274px 0px; width: 73px"></div>
+            </div>            
+            <div class="tech_icons icon_row">
+                <div class="icon_1" style="background-position: 0px 0px; width: 76px;"></div>
+                <div class="icon_2" style="background-position: 90px 0px; width: 49px"></div>
+                <div class="icon_3" style="background-position: 233px 0px; width: 107px"></div>
+                <div class="icon_4" style="background-position: 42px 0px; width: 43px"></div>
+                <div class="icon_5" style="background-position: 128px 0px; width: 38px"></div>
+            </div>            
+        </div>
     </div>
     <!--<div id="about" class="section" style="display:none;">
         <div class="content">
@@ -112,15 +136,46 @@
                         <div class="heading">Passionate people<br /> who deliver quality</div>
                         <div class="descr">We do not make just websites. We sit with you, figure out what your business exactly needs and then develop it for you.</div>
                     </div>
-                    <div class="font-image" style="margin-left: -25px;">
+                    <div class="font-image" style="margin-left: 4px;">
                         <i class="icon-users"></i>
                     </div>
                 </div> 
             </div>
         </div>        
     </div>
+    <div id="contact" style="display:none">
+        <div class="overlay"></div>
+        <div class="content-box">
+            <div class="header">
+                let us hear you
+            </div>
+            <div class="form">
+                <table>
+                    <tr>
+                        <td class="column1" rowspan="4">
+                            <textarea cols="50" rows="10" placeholder="What you have to say"></textarea>
+                        </td>
+                        <td class="column2">
+                            <input type="text" placeholder="Your name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="column2">
+                            <input type="text" placeholder="Your email id" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="column2" >
+                            <input type="text" placeholder="Your phone number" />
+                        </td>
+                    </tr>
+                    <tr><td class="column2"></td></tr>
+                </table>
+            </div>
+        </div>        
+    </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>    
     <script src="script.js"></script>
 </body>
 </html>

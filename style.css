@@ -322,8 +322,9 @@ body, html
 }
 .box .font-image
 {
-    margin-top:-227px;
-    font-size: 215px;
+    margin-top:-200px;
+    margin-left: 22px;
+    font-size: 180px;
     color: #573232;
 }
 .box .pattern
@@ -374,11 +375,156 @@ body, html
     top: 0px;
     left: 50%;
     margin-left: -100px;
-    z-index: 99;
+    z-index: 5;
     background-image: url('woven.png');
     background-repeat: repeat;
     opacity: 0.8;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 1px 1px 14px #000;
+}
+
+#contact, #contact .overlay
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;     
+}
+#contact
+{
+    z-index: 10;
+}
+#contact .overlay
+{
+    background-color: White;
+    box-shadow: inset 0px 0px 300px #000;
+    opacity: 0.92;
+}
+#contact .content-box
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    /*background-color: White;*/
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgb(80,80,80);
+    margin-left: -300px;
+    margin-top: -200px;    
+    border-width:5px;
+    border-color: Black;    
+}
+.content-box .header
+{
+    /*border-top-left-radius: 10px;
+    border-top-right-radius: 10px;*/
+    margin-top: 22px;    
+    margin-left: 20px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    text-align: left;
+    color: #498082;    
+    text-shadow: 2px 1px 2px #000;
+    width: 100%;
+    height: 60px;    
+    /*box-shadow: 0px 3px 4px rgb(80,80,80);*/
+}
+
+.form table
+{
+    margin-left: 20px;
+    margin-top: 12px;
+    width: 560px;
+    height: 280px;
+}
+.form .column1
+{
+    width:60%;
+    vertical-align: top;
+}
+.form .column1 textarea
+{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.form .column2
+{
+    width:40%;
+    vertical-align: top;
+    padding-left: 5px;
+}
+.form input, .form textarea
+{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    background-color: White;
+    border-style: none;
+    box-shadow: inset 0px 0px 6px #000;    
+    padding-left: 10px;
+    font-size: 18px;
+    color: rgb(50,50,50);
+}
+.form input
+{
+    height: 30px;
+    width:100%;
+    border-radius: 3px;
+}
+#icons
+{
+    position:absolute;
+    margin-left: 483px;
+    margin-top: -85px;
+}
+#icons .icon_row div
+{
+    display: none;
+}
+.digital_marketing_icons
+{
+    margin-left: 10px;
+}
+.digital_marketing_icons div
+{
+    display: inline-block;
+    background-image: url('digital-marketing-icons_v1.png');    
+    height: 61px;
+    margin-left: 10px;
+}
+.biz_dev_icons
+{
+    margin-left: 4px;
+}
+.biz_dev_icons div
+{
+    display: inline-block;
+    background-image: url('business-development.png');    
+    height: 62px;
+    margin-left: 8px;
+}
+.tech_icons
+{
+    margin-left: 4px;
+}
+.tech_icons div
+{
+    display: inline-block;
+    background-image: url('technology.png');    
+    height: 62px;
+    margin-left: 8px;
+}
+.icon_row .icon_2, .icon_row .icon_4
+{
+    margin-bottom: -42px;
+}
+.icon_row .icon_3
+{
+    margin-bottom: -60px;
 }
