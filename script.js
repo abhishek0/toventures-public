@@ -51,6 +51,7 @@ function rotateSelectionBar(deg)
     console.log(deg);
     $('#services .selection_bar').css({
         '-webkit-transform': 'rotate('+deg+')',
+        '-moz-transform': 'rotate('+deg+')',
     })
 }
 
@@ -146,4 +147,12 @@ $(document).ready(function(){
         var icons = $('#services .name.selected').data('icons');
         displayIconSet($('#icons .'+icons+' div'));
     }, 200);
+    $('#get_in_touch').click(function(){
+        $('#contact').removeClass('animated fadeInDown fadeOutUp');
+        $('#contact').addClass('animated fadeInDown').show();
+    })
+    $('#contact .submit div, #contact .close_btn').click(function(){        
+        $('#contact').addClass('animated fadeOutUp');
+        setTimeout(function(){$('#contact').hide()},1000);
+    });
 });

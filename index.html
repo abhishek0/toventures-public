@@ -1,7 +1,8 @@
 <html>
 <head>
     <title>toVentures</title>
-    <link rel="stylesheet" type="text/css" href="style.css">    
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/screen.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.old.css">    
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>    
     <link href='http://fonts.googleapis.com/css?family=Dosis:500,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/fontello.css">
@@ -22,26 +23,29 @@
         </div>
         <div class="stiches bottom"></div>
     </div>
+    <div id="logo">        
+        <span class="text">toVentures</span>
+    </div>
     <div id="services" class="section">
         <div class="selection_bar"></div>
-        <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="marketing" data-icons="digital_marketing_icons">
-            <span class="service_name_text">Digital Marketing</span>
-        </div>
+        <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="technology" data-icons="tech_icons">
+            <span class="service_name_text">Technology</span>
+        </div>        
         <div class="name" data-selectionBar="0deg" data-content="biz-dev" data-icons="biz_dev_icons">
             <span class="service_name_text">Business Development</span>
         </div>
-        <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="technology" data-icons="tech_icons">
-            <span class="service_name_text">Technology</span>
+        <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="marketing" data-icons="digital_marketing_icons">
+            <span class="service_name_text">Digital Marketing</span>
         </div>
         
         <div id="mainContent">
-            <span class="marketing tagline shown" style="display: table-cell;">
+            <span class="marketing tagline">
                 We reach out for you to your market so that you can <span class="underline">start getting more customers</span>
             </span>
             <span class="biz-dev tagline">
                 We sit down with you to diagnose your existing setup and then <span class="underline">provide you with a business plan to integrate technology and grow</span>
             </span>
-            <span class="technology tagline">
+            <span class="technology tagline shown" style="display: table-cell;">
                 We find all existing pain points in your business where technology can help <span class="underline">and then build you a complete solution</span>
             </span>
         </div>  
@@ -106,6 +110,9 @@
         </div>
     </div>-->
     <div id="about" class="section" style="display:none;">
+        <div id="get_in_touch">
+            <img src="Get-in-touch_sticker.png" alt="Get in Touch" />
+        </div>
         <div class="content">
             <span class="other-heading">We are <span class="red">Not</span> a web development consultancy&nbsp;!</span><br /><br /><br /><br />
             <div class="other-heading">We Are</div>
@@ -144,12 +151,15 @@
         </div>        
     </div>
     <div id="contact" style="display:none">
-        <div class="overlay"></div>
+        <div class="overlay"></div>        
         <div class="content-box">
             <div class="header">
                 let us hear you
             </div>
             <div class="form">
+                <div class="close_btn">
+                    <i class="icon-cancel-circled"></i>
+                </div>
                 <table>
                     <tr>
                         <td class="column1" rowspan="4">
@@ -169,7 +179,11 @@
                             <input type="text" placeholder="Your phone number" />
                         </td>
                     </tr>
-                    <tr><td class="column2"></td></tr>
+                    <tr>
+                        <td class="column2 submit">
+                            <div>send</div>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>        

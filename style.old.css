@@ -23,6 +23,9 @@ body, html
     text-align: center;
     overflow: hidden;
     box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);    
+    -moz-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);    
+    -webkit-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);    
+    -o-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);    
     background: url('asli_pattern.png');
     background-repeat: repeat-x;    
 }
@@ -182,13 +185,16 @@ body, html
     border-color: #61d4e7;    
     border-width: 5px;
     -webkit-transform-origin: right center;    
+    -moz-transform-origin: right center;
     z-index: 0;
     left: 180px;
     width: 200px;
     top: 50%;
     -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
     border-radius: 5px;
     -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
     box-shadow: 1px 1px 3px rgb(80,80,80);
     opacity: 0.6;
 }
@@ -212,6 +218,7 @@ body, html
     color: rgb(50,50,50);
     letter-spacing: 0px;
     -webkit-transition: display 0.5s;
+    -moz-transition: display 0.5s;
 }
 .underline
 {
@@ -366,24 +373,6 @@ body, html
     top:120px;    
 }
 
-
-#logo
-{
-    position: absolute;
-    width: 200px;
-    height: 78px;
-    top: 0px;
-    left: 50%;
-    margin-left: -100px;
-    z-index: 5;
-    background-image: url('woven.png');
-    background-repeat: repeat;
-    opacity: 0.8;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 1px 1px 14px #000;
-}
-
 #contact, #contact .overlay
 {
     position: absolute;
@@ -409,13 +398,27 @@ body, html
     left: 50%;
     width: 600px;
     height: 400px;
-    /*background-color: White;*/
+    background-color: #eab64a;
+    /*background-image: url('contact_pattern.png');*/
+    background-repeat: repeat;
     border-radius: 10px;
     box-shadow: 3px 3px 15px rgb(80,80,80);
     margin-left: -300px;
     margin-top: -200px;    
     border-width:5px;
     border-color: Black;    
+}
+#contact .close_btn
+{
+    position: absolute;
+    width:1px;
+    top:-14px;
+    right: 27px;
+    color: rgba(93,56,22,0.8);
+    z-index: 2;
+    font-size: 32px;
+    cursor: pointer;
+    text-shadow: 0px 1px 3px rgb(60,60,60);
 }
 .content-box .header
 {
@@ -427,8 +430,9 @@ body, html
     font-weight: 800;
     font-size: 42px;
     text-align: left;
-    color: #498082;    
-    text-shadow: 2px 1px 2px #000;
+    color: #5d3816;
+    color: rgba(93,56,22, 0.8);    
+    text-shadow: 1px 4px 6px #eab64a, 0 0 0 #000, 1px 4px 6px #eab64a;
     width: 100%;
     height: 60px;    
     /*box-shadow: 0px 3px 4px rgb(80,80,80);*/
@@ -451,7 +455,7 @@ body, html
     width: 100%;
     height: 100%;
     resize: none;
-    border-radius: 5px;
+    border-radius: 0px;
     overflow: hidden;
 }
 .form .column2
@@ -464,18 +468,57 @@ body, html
 {
     font-family: 'Dosis', sans-serif;
     font-weight: 800;
-    background-color: White;
+    background-color: #c89c3f;
     border-style: none;
     box-shadow: inset 0px 0px 6px #000;    
     padding-left: 10px;
     font-size: 18px;
-    color: rgb(50,50,50);
+    color: White;    
+}
+.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder
+{
+    color: #977630;
+}
+.form input::-moz-input-placeholder, .form textarea::-moz-input-placeholder
+{
+    color: #977630;
 }
 .form input
 {
     height: 30px;
     width:100%;
-    border-radius: 3px;
+    border-radius: 0px;
+}
+.form .submit
+{
+    vertical-align: bottom;
+}
+/*.form .submit div
+{
+    margin-top: 22px;    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    text-align: center;
+    color: #5d3816;
+    color: rgba(93,56,22, 0.8);       
+    width: 100%;
+    height: 40px; 
+    padding-bottom: 20px;    
+}*/
+.form .submit div
+{
+    margin-top: 22px;        
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    text-align: center;    
+    background-color: rgba(93,56,22, 0.8);    
+    width: 100%;
+    vertical-align: bottom;
+    color: #eab64a;
+    cursor: pointer;
+    padding-bottom: 15px;        
 }
 #icons
 {
@@ -527,4 +570,36 @@ body, html
 .icon_row .icon_3
 {
     margin-bottom: -60px;
+}
+#get_in_touch
+{
+    position: absolute;
+    top: 70px;
+    right: 195px;
+    z-index: 2;
+    cursor: pointer;
+}
+#get_in_touch img
+{
+    width: 143px;
+}
+#logo {
+  position: absolute;
+  width: 291px;
+  height: 64px;
+  left: 50%;
+  margin-left: -145px;
+  margin-top: 10px;
+  background-image: url("red-ribbon.png");
+  background-repeat: no-repeat;
+  font-family: "Grand Hotel", cursive;
+  font-size: 40px;
+  color: #eeeeee;
+  text-shadow: 1px 1px 3px #505050;
+  text-align: center;
+}
+/* line 83, ../sass/screen.scss */
+#logo .text {
+  display: block;
+  margin-top: 3px;
 }
