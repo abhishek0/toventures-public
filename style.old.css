@@ -574,8 +574,8 @@ body, html
 #get_in_touch
 {
     position: absolute;
-    top: 70px;
-    right: 195px;
+    top: 0px;
+    right: 0px;
     z-index: 2;
     cursor: pointer;
 }
