@@ -1,0 +1,26 @@
+@mixin style($height,$width)
+{  
+  margin: 0;
+  padding: 0 ;   
+  height: $height;
+  width: $width;
+  text-align: center;
+  background-repeat: repeat;
+}
+html
+{
+    overflow-y: scroll;
+}
+body, html
+{
+    /*background-color: #eae5c7;*/
+    /*background-color: #faf4e6;*/
+    margin: 0;
+    padding: 0  ; 
+  
+    text-align: center;
+    background-repeat: repeat;
+    letter-spacing: 1px;    
+    background-image: url('./back_pattern.png');
+
+}
