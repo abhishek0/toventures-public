@@ -1,0 +1,263 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "normalize";  
+@import "foundation";
+@import "foundation/components/global";
+@import "foundation/components/grid";
+
+@mixin font-family($header_font:null,$font-size:null,$font-weight:null)
+{
+    font-family:$header_font;
+    font-size:$font-size;
+    font-weight: $font-weight;
+}
+
+
+@mixin box-model($width:null,$height:null,$margin-top:null,$margin-left:null,$padding-top:null,$padding-left:null)
+{
+    width: $width;
+    height: $height;
+    margin-top: $margin-top;
+    margin-left: $margin-left;
+    padding-top:$padding-top;
+    padding-left:$padding-left;
+
+}
+@mixin back_img($url,$repeat)
+{
+    background-image:url($url);
+    background-repeat:$repeat;
+
+}
+
+html
+{
+    overflow-y: scroll;
+}
+body
+{
+    @include back-img('../back_pattern.png','repeat');     
+    @include box-model($height: 100%);
+}
+.navigation-header
+{   
+    @include box-shadow(0px 4px 18px rgba(50, 50, 50, 0.75));    
+    @include back-img('../asli_pattern.png','repeat');
+    @include box-model($width:100%,$height:60px);
+
+    /*text-align: center;*/
+    .stiches
+    {
+      @include back-img('../stich_new.png','repeat-x');
+      @include box-model($height: 7px);
+    }
+    .nav
+    {
+      @include box-model($height: 44px);
+      @include grid-row();
+      .nav-item
+      {        
+        @include grid-column(3, $float: left, $collapse: true);
+        height: inherit;
+        .background
+        {          
+          @include grid-column(12, $center: true, $collapse: true);
+          @include opacity(0.6);
+          @include border-radius(8px);          
+          @include box-shadow(inset 0 0 18px #000);
+          @include box-model($width:100%,$height:38px,$margin-top:4px);
+          background-color: rgb(68,99,116);
+          visibility: hidden;
+        }
+        .text
+        {
+          @include box-model($width:100%,$height:38px,$margin-top:-34px);
+          @include font-family("Grand Hotel",32px);
+          position: absolute;
+          color: #154f5d;          
+          text-align: center;
+          text-shadow: 1px 1px 2px #000;  
+
+        }
+        &.middle
+        {
+          @include grid-column(6, $float: left, $collapse: true);
+          @include box-model($padding-top: 10px);
+          .logo
+          {
+            @include grid-column(8, $center: true, $collapse: true);
+            @include back-img('../red-ribbon.png','no-repeat');
+            @include box-model($width:291px,$height:64px,$padding-top: 8px);
+            @include font-family("Grand Hotel",40px);           
+            color: #eeeeee;
+            text-shadow: 1px 1px 3px #505050;
+            text-align: center;
+          }
+        }
+      }
+    }
+}
+.services
+{
+  @include grid-row();
+  @include box-model($width:960,$margin-top:3%,$margin-left:-480px);
+  left: 50%;
+  text-align: center;
+  position: absolute;
+  &.section
+  {
+    @include grid-column(12);
+    .selection_row
+    {
+      @include grid-row();
+      .selection_bar
+      {
+      @include grid-column(3,$collapse: true);
+      @include box-shadow(1px 1px 3px rgb(80,80,80));
+      @include border-radius(5px);
+      
+      position: absolute;   
+      border-style: solid;
+      border-color: #61d4e7;    
+      border-width: 5px;
+      -webkit-transform-origin: right center;    
+      -moz-transform-origin: right center;
+      z-index: 0;
+      left: 180px;
+      top: 50%;
+      -webkit-transform: rotate(35deg);
+      -moz-transform: rotate(35deg);
+      -webkit-transition: -webkit-transform 0.4s;
+      -moz-transition: -moz-transform 0.4s;      
+      opacity: 0.6;
+      }
+
+    }
+   
+    
+    .name
+    {
+      @include box-model(150px,150px,$margin-top:20px);
+      @include border-radius(95px);
+      @include box-shadow(1px 1px 3px rgb(80,80,80));
+      display: block;
+      @include font-family("Grand Hotel",28px);        
+      background-color: rgb(150,150,150);    
+      box-shadow: 1px 1px 8px #000;     
+      cursor: pointer;         
+      opacity:0.6;
+      hover
+      {
+        background-color: #61d4e7; 
+      }
+      .service_text
+      {
+        @include box-model(150px,150px);
+        display: table-cell;        
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    &.selected
+    {
+    
+      background-color: #61d4e7;
+    }
+  }
+
+}
+.mainContent
+{  
+  @include box-model(544px,544px,$margin-top:-17em);
+  @include border-radius(544px);
+  @include box-shadow(inset 0 0 65px #0596a7); 
+  @include font-family("Londrina Solid",$font-weight:800); 
+  font-family: 'Dosis',sans-serif;
+  font-weight: 800;
+  position: absolute;
+  right:15px;
+  top: 50%;  
+
+.tagline
+{
+  @include box-model(483px,544px,$padding-left:30px);
+  @include font-family($font-size: 2.2em);
+  display: none;   
+  vertical-align: middle;
+  text-align: center;  
+  color: rgb(50,50,50);
+  letter-spacing: 0px;
+  -webkit-transition: display 0.5s;
+  -moz-transition: display 0.5s;
+  .underline
+  {
+    color: #4ecad9;
+    text-shadow: 0px 1px 3px rgb(60,60,60);
+  }
+}
+
+}
+.icons
+{
+  @include box-model($margin-top:-85px,$margin-left:483px);
+  position:absolute;
+  .icon_row div
+  {
+    display: none;
+  }
+  .icon_row
+  {
+    .icon_2,.icon_4
+   {
+     margin-bottom: -42px;
+   }
+   .icon_3
+   {
+     margin-bottom: -60px;
+   }   
+  }
+  .digital_marketing_icons
+  {
+    @include box-model($margin-left:10px);
+  }
+  .digital_marketing_icons div
+  {
+    @include back-img('../digital-marketing-icons_v1.png','no-repeat');
+    @include box-model($height:61px,$margin-left:10px);
+    display: inline-block;   
+  }
+  .biz_dev_icons
+  {
+    @include box-model($margin-left: 4px);
+  }
+  .biz_dev_icons div
+  {
+    @include back-img('../business-development.png','no-repeat');
+    @include box-model($height:62px,$margin-left:8px);
+    display: inline-block;      
+  }
+  .tech_icons
+  {
+    @include box-model($margin-left: 4px);
+  }
+  .tech_icons div
+  {
+    @include back-img('../technology.png','no-repeat');
+    @include box-model($height:62px,$margin-left:8px);
+    display: inline-block;    
+  } 
+}
+.about
+{
+  @include grid-row();
+  .Content
+  {
+    @include grid-row();
+    text-align: center;
+    .other-heading
+    {
+
+    }
+  }
+
+}

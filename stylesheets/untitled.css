@@ -1,0 +1,145 @@
+/* line 17, ../sass/untitled.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 21, ../sass/untitled.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
+  text-align: center;
+  letter-spacing: 1px;
+  background-image: url("../back_pattern.png");
+  background-repeat: "repeat";
+}
+
+/* line 31, ../sass/untitled.scss */
+.container {
+  position: absolute;
+  width: 1355px;
+}
+
+/* line 36, ../sass/untitled.scss */
+#nav {
+  top: 0px;
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
+  -o-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
+  background-image: url("../asli_pattern.png");
+  background-repeat: "repeat";
+}
+
+/* line 51, ../sass/untitled.scss */
+#nav .stiches {
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../stich_new.png");
+  background-repeat: "repeat-x";
+}
+
+/* line 58, ../sass/untitled.scss */
+#nav .stiches.top {
+  top: 2px;
+}
+
+/* line 62, ../sass/untitled.scss */
+#nav .stiches.bottom {
+  bottom: 2px;
+}
+
+/* line 66, ../sass/untitled.scss */
+#nav .header {
+  position: absolute;
+  height: 50px;
+  width: 960px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  margin-left: -480px;
+  margin-top: -25px;
+}
+
+/* line 75, ../sass/untitled.scss */
+.fake {
+  position: absolute;
+  height: 40px;
+  width: 240px;
+  text-align: center;
+  margin-top: 2px;
+  opacity: 0.6;
+  border-radius: 8px;
+  background-color: #446374;
+  box-shadow: inset 0 0 18px #000;
+  top: 5px;
+  display: none;
+}
+
+/* line 87, ../sass/untitled.scss */
+.nav-item {
+  position: absolute;
+  height: 38px;
+  width: 240px;
+  text-align: center;
+  color: #154f5d;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Grand Hotel', cursive;
+  /*padding-top: 5px;*/
+  top: 5px;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+/* line 101, ../sass/untitled.scss */
+.left {
+  left: 0px;
+}
+
+/* line 105, ../sass/untitled.scss */
+.right {
+  right: 0px;
+}
+
+/* line 109, ../sass/untitled.scss */
+.nav-item.selected {
+  color: #4ecad9;
+}
+
+/* line 113, ../sass/untitled.scss */
+.nav-item.hover {
+  color: #4ecad9;
+}
+
+/* line 116, ../sass/untitled.scss */
+#logo {
+  position: absolute;
+  height: 64px;
+  width: 291px;
+  text-align: center;
+  left: 50%;
+  margin-left: -145px;
+  margin-top: 10px;
+  background-image: url("../red-ribbon.png");
+  background-repeat: "no-repeate";
+  font-family: "Grand Hotel", cursive;
+  font-size: 40px;
+  color: #eeeeee;
+  text-shadow: 1px 1px 3px #505050;
+}
+
+/* line 83, ../sass/screen.scss */
+/* line 130, ../sass/untitled.scss */
+#logo .text {
+  display: block;
+  margin-top: 3px;
+}
