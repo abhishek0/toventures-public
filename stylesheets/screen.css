@@ -7408,19 +7408,19 @@ select {
     float: right !important;
   }
 }
-/* line 34, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 html {
   overflow-y: scroll;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 body {
   background-image: url("../back_pattern.png");
   background-repeat: "repeat";
   height: 100%;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .navigation-header {
   -webkit-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 4px 18px rgba(50, 50, 50, 0.75);
@@ -7431,13 +7431,13 @@ body {
   height: 60px;
   /*text-align: center;*/
 }
-/* line 50, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .navigation-header .stiches {
   background-image: url("../stich_new.png");
   background-repeat: "repeat-x";
   height: 7px;
 }
-/* line 55, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .navigation-header .nav {
   height: 44px;
   width: 100%;
@@ -7457,7 +7457,7 @@ body {
 .navigation-header .nav:after {
   clear: both;
 }
-/* line 59, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .navigation-header .nav .nav-item {
   position: relative;
   padding-left: 0;
@@ -7466,7 +7466,7 @@ body {
   float: left;
   height: inherit;
 }
-/* line 63, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .navigation-header .nav .nav-item .background {
   position: relative;
   padding-left: 0;
@@ -7492,19 +7492,19 @@ body {
   background-color: #446374;
   visibility: hidden;
 }
-/* line 73, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .navigation-header .nav .nav-item .text {
   width: 100%;
   height: 38px;
   margin-top: -34px;
-  font-family: "Grand Hotel";
   font-size: 32px;
+  font-family: "Grand Hotel", cursive;
   position: absolute;
   color: #154f5d;
   text-align: center;
   text-shadow: 1px 1px 2px #000;
 }
-/* line 83, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .navigation-header .nav .nav-item.middle {
   position: relative;
   padding-left: 0;
@@ -7513,7 +7513,7 @@ body {
   float: left;
   padding-top: 10px;
 }
-/* line 87, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .navigation-header .nav .nav-item.middle .logo {
   position: relative;
   padding-left: 0;
@@ -7528,14 +7528,14 @@ body {
   width: 291px;
   height: 64px;
   padding-top: 8px;
-  font-family: "Grand Hotel";
   font-size: 40px;
+  font-family: "Grand Hotel", cursive;
   color: #eeeeee;
   text-shadow: 1px 1px 3px #505050;
   text-align: center;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .services {
   width: 100%;
   margin-left: auto;
@@ -7560,7 +7560,7 @@ body {
 .services:after {
   clear: both;
 }
-/* line 108, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .services.section {
   position: relative;
   padding-left: 0.9375em;
@@ -7568,7 +7568,7 @@ body {
   width: 100%;
   float: left;
 }
-/* line 111, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .services.section .selection_row {
   width: 100%;
   margin-left: auto;
@@ -7587,7 +7587,7 @@ body {
 .services.section .selection_row:after {
   clear: both;
 }
-/* line 114, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .services.section .selection_row .selection_bar {
   position: relative;
   padding-left: 0;
@@ -7617,7 +7617,7 @@ body {
   -moz-transition: -moz-transform 0.4s;
   opacity: 0.6;
 }
-/* line 139, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .services.section .name {
   width: 150px;
   height: 150px;
@@ -7631,15 +7631,15 @@ body {
   -moz-box-shadow: 1px 1px 3px #505050;
   box-shadow: 1px 1px 3px #505050;
   display: block;
-  font-family: "Grand Hotel";
   font-size: 28px;
+  font-family: "Grand Hotel", cursive;
   background-color: #969696;
   box-shadow: 1px 1px 8px #000;
   cursor: pointer;
   opacity: 0.6;
 }
 /* line 150, ../sass/screen.scss */
-.services.section .name hover {
+.services.section .name :hover {
   background-color: #61d4e7;
 }
 /* line 154, ../sass/screen.scss */
@@ -7668,15 +7668,13 @@ body {
   -webkit-box-shadow: inset 0 0 65px #0596a7;
   -moz-box-shadow: inset 0 0 65px #0596a7;
   box-shadow: inset 0 0 65px #0596a7;
-  font-family: "Londrina Solid";
   font-weight: 800;
   font-family: 'Dosis',sans-serif;
-  font-weight: 800;
   position: absolute;
   right: 15px;
   top: 50%;
 }
-/* line 182, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .mainContent .tagline {
   width: 483px;
   height: 544px;
@@ -7690,13 +7688,13 @@ body {
   -webkit-transition: display 0.5s;
   -moz-transition: display 0.5s;
 }
-/* line 193, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .mainContent .tagline .underline {
   color: #4ecad9;
   text-shadow: 0px 1px 3px #3c3c3c;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .icons {
   margin-top: -85px;
   margin-left: 483px;
@@ -7706,44 +7704,119 @@ body {
 .icons .icon_row div {
   display: none;
 }
-/* line 211, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .icons .icon_row .icon_2, .icons .icon_row .icon_4 {
   margin-bottom: -42px;
 }
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .icons .icon_row .icon_3 {
   margin-bottom: -60px;
 }
-/* line 220, ../sass/screen.scss */
-.icons .digital_marketing_icons {
+/* line 223, ../sass/screen.scss */
+.icons .dig .icon_1 {
+  background-position: 0px 0px;
+  width: 59px;
+}
+/* line 228, ../sass/screen.scss */
+.icons .dig .icon_2 {
+  background-position: 120px 0px;
+  width: 60px;
+}
+/* line 233, ../sass/screen.scss */
+.icons .dig .icon_3 {
+  background-position: 180px 0px;
+  width: 60px;
+}
+/* line 238, ../sass/screen.scss */
+.icons .dig .icon_4 {
+  background-position: 60px 0px;
+  width: 60px;
+}
+/* line 243, ../sass/screen.scss */
+.icons .dig .icon_5 {
+  background-position: 239px 0px;
+  width: 59px;
+}
+/* line 248, ../sass/screen.scss */
+.icons .dig .digital_marketing_icons {
   margin-left: 10px;
 }
-/* line 224, ../sass/screen.scss */
-.icons .digital_marketing_icons div {
+/* line 252, ../sass/screen.scss */
+.icons .dig .digital_marketing_icons div {
   background-image: url("../digital-marketing-icons_v1.png");
   background-repeat: "no-repeat";
   height: 61px;
   margin-left: 10px;
-  display: inline-block;
+  display: none;
 }
-/* line 230, ../sass/screen.scss */
-.icons .biz_dev_icons {
+/* line 261, ../sass/screen.scss */
+.icons .biz .icon_1 {
+  background-position: 0px 0px;
+  width: 65px;
+}
+/* line 266, ../sass/screen.scss */
+.icons .biz .icon_2 {
+  background-position: 65px 0px;
+  width: 67px;
+}
+/* line 271, ../sass/screen.scss */
+.icons .biz .icon_3 {
+  background-position: 135px 0px;
+  width: 65px;
+}
+/* line 276, ../sass/screen.scss */
+.icons .biz .icon_4 {
+  background-position: 202px 0px;
+  width: 65px;
+}
+/* line 281, ../sass/screen.scss */
+.icons .biz .icon_5 {
+  background-position: 274px 0px;
+  width: 73px;
+}
+/* line 286, ../sass/screen.scss */
+.icons .biz .biz_dev_icons {
   margin-left: 4px;
 }
-/* line 234, ../sass/screen.scss */
-.icons .biz_dev_icons div {
+/* line 290, ../sass/screen.scss */
+.icons .biz .biz_dev_icons div {
+  /*@include back-img('../business-development.png','repeat');*/
   background-image: url("../business-development.png");
-  background-repeat: "no-repeat";
   height: 62px;
   margin-left: 8px;
-  display: inline-block;
+  display: none;
 }
-/* line 240, ../sass/screen.scss */
-.icons .tech_icons {
+/* line 300, ../sass/screen.scss */
+.icons .tech .icon_1 {
+  background-position: 0px 0px;
+  width: 80px;
+}
+/* line 305, ../sass/screen.scss */
+.icons .tech .icon_2 {
+  background-position: 90px 0px;
+  width: 80px;
+}
+/* line 310, ../sass/screen.scss */
+.icons .tech .icon_3 {
+  background-position: 233px 0px;
+  width: 107px;
+}
+/* line 315, ../sass/screen.scss */
+.icons .tech .icon_4 {
+  background-position: 42px 0px;
+  width: 43px;
+}
+/* line 320, ../sass/screen.scss */
+.icons .tech .icon_5 {
+  background-position: 128px 0px;
+  width: 38px;
+}
+/* line 325, ../sass/screen.scss */
+.icons .tech .tech_icons {
   margin-left: 4px;
 }
-/* line 244, ../sass/screen.scss */
-.icons .tech_icons div {
+/* line 329, ../sass/screen.scss */
+.icons .tech .tech_icons div {
   background-image: url("../technology.png");
   background-repeat: "no-repeat";
   height: 62px;
@@ -7751,7 +7824,7 @@ body {
   display: inline-block;
 }
 
-/* line 251, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .about {
   width: 100%;
   margin-left: auto;
@@ -7770,8 +7843,16 @@ body {
 .about:after {
   clear: both;
 }
-/* line 254, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .about .Content {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  float: left;
+}
+/* line 346, ../sass/screen.scss */
+.about .Content .info {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -7779,14 +7860,56 @@ body {
   margin-bottom: 0;
   max-width: 62.5em;
   *zoom: 1;
-  text-align: center;
 }
 /* line 121, ../../../../usr/local/share/gems/gems/zurb-foundation-4.2.1/scss/foundation/components/_global.scss */
-.about .Content:before, .about .Content:after {
+.about .Content .info:before, .about .Content .info:after {
   content: " ";
   display: table;
 }
 /* line 122, ../../../../usr/local/share/gems/gems/zurb-foundation-4.2.1/scss/foundation/components/_global.scss */
-.about .Content:after {
+.about .Content .info:after {
   clear: both;
+}
+/* line 349, ../sass/screen.scss */
+.about .Content .info .about_text {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  width: 75%;
+  right: 25%;
+  left: auto;
+  float: left;
+  margin-top: 30px;
+  margin-left: -480px;
+  font-weight: 500;
+  font-family: 'Dosis', sans-serif;
+  position: absolute;
+  text-align: right;
+  color: #323232;
+}
+/* line 358, ../sass/screen.scss */
+.about .Content .info .about_text .other-heading {
+  font-size: 28px;
+  font-weight: 800;
+  text-shadow: 0px 1px 3px #3c3c3c;
+}
+/* line 362, ../sass/screen.scss */
+.about .Content .info .about_text .other-heading .red {
+  color: #f43939;
+  text-shadow: 1px 1px 3px #000;
+}
+/* line 367, ../sass/screen.scss */
+.about .Content .info .about_text .other-heading .bottom {
+  bottom: 0px;
+}
+/* line 375, ../sass/screen.scss */
+.about .Content .info .get_in_touch {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  width: 25%;
+  left: 75%;
+  right: auto;
+  float: left;
+  position: absolute;
 }

@@ -4,15 +4,12 @@
 @import "foundation";
 @import "foundation/components/global";
 @import "foundation/components/grid";
-
-@mixin font-family($header_font:null,$font-size:null,$font-weight:null)
+$header_font:'Grand Hotel', cursive;
+@mixin font-family($font-size:null,$font-weight:null)
 {
-    font-family:$header_font;
     font-size:$font-size;
     font-weight: $font-weight;
 }
-
-
 @mixin box-model($width:null,$height:null,$margin-top:null,$margin-left:null,$padding-top:null,$padding-left:null)
 {
     width: $width;
@@ -72,7 +69,8 @@ body
         .text
         {
           @include box-model($width:100%,$height:38px,$margin-top:-34px);
-          @include font-family("Grand Hotel",32px);
+          @include font-family(32px);
+          font-family:$header_font;
           position: absolute;
           color: #154f5d;          
           text-align: center;
@@ -88,7 +86,8 @@ body
             @include grid-column(8, $center: true, $collapse: true);
             @include back-img('../red-ribbon.png','no-repeat');
             @include box-model($width:291px,$height:64px,$padding-top: 8px);
-            @include font-family("Grand Hotel",40px);           
+            @include font-family(40px);
+            font-family:$header_font;          
             color: #eeeeee;
             text-shadow: 1px 1px 3px #505050;
             text-align: center;
@@ -141,12 +140,13 @@ body
       @include border-radius(95px);
       @include box-shadow(1px 1px 3px rgb(80,80,80));
       display: block;
-      @include font-family("Grand Hotel",28px);        
+      @include font-family(28px);        
+      font-family:$header_font;
       background-color: rgb(150,150,150);    
       box-shadow: 1px 1px 8px #000;     
       cursor: pointer;         
       opacity:0.6;
-      hover
+      :hover
       {
         background-color: #61d4e7; 
       }
@@ -171,9 +171,8 @@ body
   @include box-model(544px,544px,$margin-top:-17em);
   @include border-radius(544px);
   @include box-shadow(inset 0 0 65px #0596a7); 
-  @include font-family("Londrina Solid",$font-weight:800); 
+  @include font-family($font-weight:800); 
   font-family: 'Dosis',sans-serif;
-  font-weight: 800;
   position: absolute;
   right:15px;
   top: 50%;  
@@ -201,8 +200,10 @@ body
 {
   @include box-model($margin-top:-85px,$margin-left:483px);
   position:absolute;
-  .icon_row div
+  
+  .icon_row div 
   {
+    
     display: none;
   }
   .icon_row
@@ -216,48 +217,168 @@ body
      margin-bottom: -60px;
    }   
   }
-  .digital_marketing_icons
+  .dig
   {
-    @include box-model($margin-left:10px);
-  }
-  .digital_marketing_icons div
-  {
-    @include back-img('../digital-marketing-icons_v1.png','no-repeat');
-    @include box-model($height:61px,$margin-left:10px);
-    display: inline-block;   
-  }
-  .biz_dev_icons
-  {
-    @include box-model($margin-left: 4px);
-  }
-  .biz_dev_icons div
-  {
-    @include back-img('../business-development.png','no-repeat');
-    @include box-model($height:62px,$margin-left:8px);
-    display: inline-block;      
-  }
-  .tech_icons
-  {
-    @include box-model($margin-left: 4px);
-  }
-  .tech_icons div
-  {
-    @include back-img('../technology.png','no-repeat');
-    @include box-model($height:62px,$margin-left:8px);
-    display: inline-block;    
+      .icon_1 
+    {
+      background-position: 0px 0px;
+      @include box-model(59px);
+    }
+    .icon_2 
+    {
+      background-position: 120px 0px;
+      @include box-model(60px);
+    } 
+    .icon_3 
+    {
+      background-position: 180px 0px;
+      @include box-model(60px);
+    } 
+    .icon_4 
+    {
+     background-position: 60px 0px;
+      @include box-model(60px);
+    } 
+    .icon_5 
+    {
+      background-position: 239px 0px;
+      @include box-model(59px);
+    }  
+    .digital_marketing_icons
+    {
+      @include box-model($margin-left:10px);
+    }
+    .digital_marketing_icons div
+    {
+      @include back-img('../digital-marketing-icons_v1.png','no-repeat');
+      @include box-model($height:61px,$margin-left:10px);   
+      display:none;    
+    } 
   } 
+  .biz
+  {
+    .icon_1 
+    {
+      background-position: 0px 0px;
+      @include box-model(65px) ;
+    }
+    .icon_2 
+    {
+      background-position: 65px 0px;
+      @include box-model(67px);
+    } 
+    .icon_3 
+    {
+      background-position: 135px 0px;
+      @include box-model(65px);
+    } 
+    .icon_4 
+    {
+      background-position: 202px 0px; 
+      @include box-model(65px);
+    } 
+    .icon_5 
+    {
+      background-position: 274px 0px; 
+      @include box-model(73px);
+    } 
+    .biz_dev_icons
+    {
+      @include box-model($margin-left: 4px);    
+    }
+    .biz_dev_icons div
+    {
+      /*@include back-img('../business-development.png','repeat');*/
+      background-image: url('../business-development.png');
+      @include box-model($height:62px,$margin-left:8px);
+      display:none;
+    } 
+  }
+  .tech
+  {
+    .icon_1
+    {
+      background-position: 0px 0px; 
+      @include box-model(80px);
+    }
+    .icon_2
+    {
+      background-position: 90px 0px; 
+      @include box-model(80px);
+    }
+    .icon_3
+    {
+      background-position: 233px 0px; 
+      @include box-model(107px);
+    }
+    .icon_4
+    {
+      background-position: 42px 0px; 
+      @include box-model(43px);
+    }
+    .icon_5
+    {
+      background-position: 128px 0px; 
+      @include box-model(38px);
+    }
+    .tech_icons
+    {
+      @include box-model($margin-left: 4px);    
+    }
+    .tech_icons div
+    {    
+      @include back-img('../technology.png','no-repeat');  
+      @include box-model($height:62px,$margin-left:8px);
+      display:inline-block;    
+    } 
+  }
+  
+  
 }
+
 .about
 {
   @include grid-row();
   .Content
-  {
-    @include grid-row();
-    text-align: center;
-    .other-heading
+  { 
+    @include grid-column(12,$collapse:true);
+    .info
     {
+      @include grid-row();
+      .about_text
+      {
+       @include grid-column(9,$pull:3,$collapse:true);  
+       @include box-model($margin-top: 30px,$margin-left: -480px);
+       @include font-family($font-weight: 500);
+       font-family: 'Dosis', sans-serif;      
+       position: absolute;
+       text-align:right;  
+       color: rgb(50,50,50);    
+       .other-heading
+       {
+        @include font-family($font-size: 28px,$font-weight: 800); 
+        text-shadow: 0px 1px 3px rgb(60,60,60);
+        .red
+        {
+         color: #f43939;
+         text-shadow: 1px 1px 3px #000;
+        }
+        .bottom
+        {
+         bottom:0px;
 
+        }
+      }
+    
     }
+     .get_in_touch
+    {
+      @include grid-column(3,$push:9,$collapse:true);
+      position:absolute;
+    }
+
+   } 
+
   }
 
 }
