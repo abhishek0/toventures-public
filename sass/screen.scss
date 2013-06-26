@@ -4,12 +4,53 @@
 @import "foundation";
 @import "foundation/components/global";
 @import "foundation/components/grid";
+
 $header_font:'Grand Hotel', cursive;
 @mixin font-family($font-size:null,$font-weight:null)
 {
     font-size:$font-size;
     font-weight: $font-weight;
 }
+@mixin icon1($x,$y,$width)
+{
+  .icon_1 
+   {
+     background-position: $x $y;
+     width: $width;
+   }
+}
+@mixin icon2($x,$y,$width)
+{    .icon_2 
+    {
+     background-position: $x $y;
+      width: $width;
+    }
+}    
+@mixin icon3($x,$y,$width)
+{
+  .icon_3 
+    {
+      background-position: $x $y;
+      width: $width;
+    } 
+}
+@mixin icon4($x,$y,$width)
+{    
+    .icon_4 
+    {
+     background-position: $x $y;
+      width: $width;
+    } 
+}
+@mixin icon5($x,$y,$width)
+{    
+    .icon_5 
+    {
+     background-position: $x $y;
+      width: $width;
+    }
+}      
+
 @mixin box-model($width:null,$height:null,$margin-top:null,$margin-left:null,$padding-top:null,$padding-left:null)
 {
     width: $width;
@@ -18,15 +59,12 @@ $header_font:'Grand Hotel', cursive;
     margin-left: $margin-left;
     padding-top:$padding-top;
     padding-left:$padding-left;
-
 }
 @mixin back_img($url,$repeat)
 {
     background-image:url($url);
     background-repeat:$repeat;
-
 }
-
 html
 {
     overflow-y: scroll;
@@ -200,7 +238,6 @@ body
 {
   @include box-model($margin-top:-85px,$margin-left:483px);
   position:absolute;
-  
   .icon_row div 
   {
     
@@ -219,31 +256,11 @@ body
   }
   .dig
   {
-      .icon_1 
-    {
-      background-position: 0px 0px;
-      @include box-model(59px);
-    }
-    .icon_2 
-    {
-      background-position: 120px 0px;
-      @include box-model(60px);
-    } 
-    .icon_3 
-    {
-      background-position: 180px 0px;
-      @include box-model(60px);
-    } 
-    .icon_4 
-    {
-     background-position: 60px 0px;
-      @include box-model(60px);
-    } 
-    .icon_5 
-    {
-      background-position: 239px 0px;
-      @include box-model(59px);
-    }  
+    @include icon1(0px,0px,59px);
+    @include icon2(120px,0px,60px);
+    @include icon3(180px,0px,60px);
+    @include icon4(60px,0px,60px);
+    @include icon5(239px,0px,60px);   
     .digital_marketing_icons
     {
       @include box-model($margin-left:10px);
@@ -257,31 +274,12 @@ body
   } 
   .biz
   {
-    .icon_1 
-    {
-      background-position: 0px 0px;
-      @include box-model(65px) ;
-    }
-    .icon_2 
-    {
-      background-position: 65px 0px;
-      @include box-model(67px);
-    } 
-    .icon_3 
-    {
-      background-position: 135px 0px;
-      @include box-model(65px);
-    } 
-    .icon_4 
-    {
-      background-position: 202px 0px; 
-      @include box-model(65px);
-    } 
-    .icon_5 
-    {
-      background-position: 274px 0px; 
-      @include box-model(73px);
-    } 
+    @include icon1(0px,0px,65px);
+    @include icon2(65px,0px,67px);
+    @include icon3(1350px,0px,65px);
+    @include icon4(202px,0px,65px);
+    @include icon5(274px,0px,73px);
+    
     .biz_dev_icons
     {
       @include box-model($margin-left: 4px);    
@@ -296,31 +294,11 @@ body
   }
   .tech
   {
-    .icon_1
-    {
-      background-position: 0px 0px; 
-      @include box-model(80px);
-    }
-    .icon_2
-    {
-      background-position: 90px 0px; 
-      @include box-model(80px);
-    }
-    .icon_3
-    {
-      background-position: 233px 0px; 
-      @include box-model(107px);
-    }
-    .icon_4
-    {
-      background-position: 42px 0px; 
-      @include box-model(43px);
-    }
-    .icon_5
-    {
-      background-position: 128px 0px; 
-      @include box-model(38px);
-    }
+    @include icon1(0px,0px,80px);
+    @include icon2(90px,0px,80px);
+    @include icon3(233px,0px,107px);
+    @include icon4(42px,0px,43px);
+    @include icon5(128px,0px,38px);
     .tech_icons
     {
       @include box-model($margin-left: 4px);    
@@ -329,11 +307,9 @@ body
     {    
       @include back-img('../technology.png','no-repeat');  
       @include box-model($height:62px,$margin-left:8px);
-      display:inline-block;    
+      display:none;    
     } 
-  }
-  
-  
+  }  
 }
 
 .about
@@ -345,6 +321,7 @@ body
     .info
     {
       @include grid-row();
+      margin-bottom:200px;
       .about_text
       {
        @include grid-column(9,$pull:3,$collapse:true);  
@@ -352,7 +329,7 @@ body
        @include font-family($font-weight: 500);
        font-family: 'Dosis', sans-serif;      
        position: absolute;
-       text-align:right;  
+       text-align:right; 
        color: rgb(50,50,50);    
        .other-heading
        {
@@ -365,20 +342,172 @@ body
         }
         .bottom
         {
-         bottom:0px;
-
+         position:absolute;
+         bottom:-114px;
+         right: 202px;
         }
-      }
-    
+      }    
     }
      .get_in_touch
     {
-      @include grid-column(3,$push:9,$collapse:true);
+      @include grid-column(2,$offset:1,$push:9,$collapse:true);
       position:absolute;
     }
+   }
+   .boxes
+   {
+    @include grid-row();
+    .box
+    {
+     @include grid-column(4,$collapse:true);
+     .image
+     {
+      top: 0px;
+      height:250px;
+      background-color: White;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: inset 0 0 160px #000;
+      opacity: 0.4;
+      
+     }
+     .space
+     {
+      margin-left: 30px;
+      margin-right: 30px;
+     }
+     .pattern
+     {
+      @include back-img('../low_contrast_linen.png','repeat');
+      @include box-model(82%,280px);
+      position: absolute;
+      bottom: 0px;
+      z-index:1;
+      font-family: 'Dosis', sans-serif;
+      color: White;
+      text-shadow: 0px 1px 3px rgb(60,60,60);
+      text-align: center;    
+      height: 50px;
+      overflow: hidden; 
+      .heading
+      {
+        @include box-model(280px);
+        @include font-family(30px,400);
+        line-height:44px;
+        position: absolute;
+        top:5px;
+        left:10px;
+        font-family:$header_font;   
+        text-shadow: 0px 1px 3px rgb(60,60,60);
+        text-align: left;
+      }
+      .descr
+      {
+        position: absolute;
+        line-height:20px;
+        bottom: 0px;
+        text-align: left;    
+        left:10px;
+        font-weight: bold;
+        top:120px;
+      }
+     }
+     .font-image
+     {
+      @include box-model($height:250px,$margin-top:-200px,$margin-left:42px);
+      @include font-family($font-size:180px);
+      color: #573232;
+     &.margin
+     {
+      margin-left:20px;
+     }
 
-   } 
-
+     }
+    }    
+   }   
   }
+}
+.contact
+{
+  z-index: 10;
+  .overlay
+  {
+    @include box-model(100%,100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: White;
+    box-shadow: inset 0px 0px 300px #000;
+    opacity: 0.92;
+  }
+  .content-box
+  {
+    @include grid-row();
+    @include box-model(600px,400px);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background-color: #eab64a;
+    /*background-image: url('contact_pattern.png');*/
+    background-repeat: repeat;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgb(80,80,80);
+    margin-left: -300px;
+    margin-top: -200px;    
+    border-width:5px;
+    border-color: Black;
+    .header
+    {
+      @include box-model(100%,60px,$margin-top: 22px,$margin-left: 20px);
+      @include font-family(42px,800);
+      font-family: 'Dosis', sans-serif;
+      text-align: left;
+      color: #5d3816;
+      color: rgba(93,56,22, 0.8);    
+      text-shadow: 1px 4px 6px #eab64a, 0 0 0 #000, 1px 4px 6px #eab64a;        
+    } 
+    .form
+    {  
+      input,textarea
+      {
+        font-family: 'Dosis', sans-serif;
+        font-weight: 800;
+        background-color: #c89c3f;
+        border-style: none;
+        box-shadow: inset 0px 0px 6px #000;    
+        padding-left: 10px;
+        font-size: 18px;
+        color: White;    
+      }
+     .close_btn
+      {
+       position: absolute;
+       width:1px;
+       top:-14px;
+       right: 27px;
+       color: rgba(93,56,22,0.8);
+       z-index: 2;
+       font-size: 32px;
+       cursor: pointer;
+       text-shadow: 0px 1px 3px rgb(60,60,60);
+      }
+     .column1
+      {
+       @include grid-column(6,$pull:6,$collapse:true);
+       textarea
+       {
+        position: absolute;
+        resize: none;
+        border-radius: 0px;
+        overflow: hidden;
+       }
 
+      }
+      .column2
+      {
+        @include grid-column(6,$push:6,$collapse:true);
+        
+      }
+    }  
+  }
 }
