@@ -24,28 +24,28 @@
         <div class="nav">
           <div class="nav-item">
             <div class="background"></div>
-            <div class="text">What we provide</div>
+            <div class="text selected" id="services_show">What we provide</div>
           </div>
           <div class="nav-item middle">
             <div class="logo">toVentures</div>
           </div>
           <div class="nav-item">
             <div class="background"></div>
-            <div class="text">About</div>
+            <div class="text" id="about_show">About</div>
           </div>
         </div>
         <div class="stiches"></div>
   </div>
-  <div class="services section" style="display:none">
+  <div class="services section" >
       <div class="selection_row"><div class="selection_bar"></div></div>
-      <div class="name selected" data-selectionBar="35deg" style="margin-left: 45px;" data-content="technology" data-icons="tech_icons">
+      <div class="name margin selected" data-selectionBar="35deg" data-content="technology" data-icons="tech_icons">
             <span class="service_text">Technology</span>
       </div>       
       <div class="name" data-selectionBar="0deg" data-content="biz-dev" data-icons="biz_dev_icons">
         <span class="service_text">Business Development</span>
       </div>
-      <div class="name" data-selectionBar="-35deg" style="margin-left: 45px;" data-content="marketing" data-icons="digital_marketing_icons">
-        <span class="service_text"> Digital Marketing</span>
+      <div class="name margin" data-selectionBar="-35deg"  data-content="marketing" data-icons="digital_marketing_icons">
+        <span class="service_text"> Digital &nbsp;Marketing</span>
        </div>
     
       <div class="mainContent">
@@ -57,42 +57,36 @@
           We sit down with you to diagnose your existing setup and then 
           <span class="underline">provide you with a business plan to integrate technology and grow</span>
         </span>
-        <span class="technology tagline" style="display: table-cell" >
+        <span class="technology tagline"  >
           We find all existing pain points in your business where technology can help
           <span class="underline">and then build you a complete solution</span>
         </span>
       </div>
       <div class="icons">
-          <div class="dig">
             <div class="digital_marketing_icons icon_row">
                 <div class="icon_1" ></div>
                 <div class="icon_2" ></div>                
                 <div class="icon_3" ></div>
                 <div class="icon_4" ></div>
                 <div class="icon_5" ></div>
-            </div>
-          </div>
-          <div class="biz">
+            </div>          
             <div class="biz_dev_icons icon_row" >
                 <div class="icon_1" ></div>
                 <div class="icon_2" ></div>                
                 <div class="icon_3" ></div>
                 <div class="icon_4" ></div>
                 <div class="icon_5" ></div>
-            </div>
-          </div> 
-          <div class="tech">             
+            </div>                    
             <div class="tech_icons icon_row">
                 <div class="icon_1" ></div>
                 <div class="icon_2"></div>
                 <div class="icon_3" ></div>
                 <div class="icon_4"></div>
                 <div class="icon_5"></div>
-            </div> 
-          </div>   
+            </div>            
       </div>
   </div>
-  <div class="about" style="display:none" >
+  <div class="about" style="display:none">
       <div class="content">
         <div class="info">
           <div class="about_text">
@@ -145,7 +139,7 @@
         
       </div>      
   </div>
-  <div class="contact">
+  <div class="contact" style="display:none" class="animated fadeInDown" >
     <div class="overlay"></div>
     <div class="content-box">
       <div class="header">let us hear you</div>
@@ -154,33 +148,19 @@
           <i class="icon-cancel-circled"></i>
         </div>
         <div class="column1">
-          <textarea cols="50" rows="10" placeholder="What you have to say"></textarea>
+          <textarea cols="50" rows="12" placeholder="What you have to say"></textarea>
         </div>
-        <div class="column2">
-          
-            <tr>
-              <td><input type="text" placeholder="Your name" /></td>
-            </tr>
-            <tr>
-              <td class="column3">
-                <input type="text" placeholder="Your email id" />
-              </td>
-            </tr>
-            <tr>
-              <td class="column3" >
-                <input type="text" placeholder="Your phone number" />
-              </td>
-            </tr>
-            <tr>
-              <td class="column3 submit">
-                <div>send</div>
-              </td>
-            </tr>
-          
+        <div class="column2">      
+            <input type="text" placeholder="Your name" />
+            <input type="text" placeholder="Your email id" />
+            <input type="text" placeholder="Your phone number" />    
+            <div class="submit">send</div>     
         </div>
       </div>
     </div>
-  </div>  
+  </div> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>    
+    <script src="script.js"></script> 
 </body>
 </html>
 
