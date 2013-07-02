@@ -1,4 +1,4 @@
-<html>
+<html ng-app>
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
@@ -13,30 +13,31 @@
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>    
     <link href='http://fonts.googleapis.com/css?family=Dosis:500,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/screen.css">
-
     <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="animate-custom.css">
+    
 
 </head>
-<body>
+<body ng-controller="GetinCtrl">
   <div class="navigation-header">
         <div class="stiches"></div>
         <div class="nav">
           <div class="nav-item">
-            <div class="background"></div>
-            <div class="text selected" id="services_show">What we provide</div>
+            <div class="background" ></div>
+            <div class="text selected" ng-click="hidden1=true">What we provide</div>
           </div>
           <div class="nav-item middle">
             <div class="logo">toVentures</div>
           </div>
           <div class="nav-item">
-            <div class="background"></div>
-            <div class="text" id="about_show">About</div>
+            <div ng-show="fake" ng-animate="{show:'show_fake',hide:'hide_fake'}" >
+            </div>
+            <div >
+            <div class="text" ng-click="hidden1=false">About</div></div>
           </div>
         </div>
         <div class="stiches"></div>
   </div>
-  <div class="services section" >
+  <div class="services section" ng-show="hidden1" >
       <div class="selection_row"><div class="selection_bar"></div></div>
       <div class="name margin selected" data-selectionBar="35deg" data-content="technology" data-icons="tech_icons">
             <span class="service_text">Technology</span>
@@ -86,22 +87,25 @@
             </div>            
       </div>
   </div>
-  <div class="about" style="display:none">
-      <div class="content">
+  <div class="about"  ng-show="!hidden1" ng-animate="{show:'fadein',hidden:'fadeout'}">
+      <div class="content" >
         <div class="info">
           <div class="about_text">
             <div class="other-heading">We are <span class="red">Not</span> a web development consultancy&nbsp;!
                <span class="bottom">We Are</span>
             </div>
           </div>
-          <div class="get_in_touch">
-            <img src="Get-in-touch_sticker.png" alt="Get in Touch" />
+          <div>
+           <div class="get_in_touch">
+             <img src="Get-in-touch_sticker.png" alt="Get in Touch"  ng-click="hidden=false" />
+           </div> 
           </div> 
         </div>
-        <div class="boxes">
-          <div class="box ">
+        <div class="boxes" >
+          <div class="box">
             <div class="image space"></div>
-            <div class="pattern space">
+            <div ng-hide="!ragini" ng-animate="{show:'up',hide:'down'}">
+            <div class="pattern space" ng-mouseover="ragini=false" ng-mouseleave="ragini=true">
               <div class="heading">Experts of Technology <br>
                 and its optimal usage
               </div>
@@ -110,26 +114,31 @@
                 new or existing. And we are smart enough to tell you, how you can use that too.
               </div>
             </div>
+            </div>
             <div class="font-image">
               <i class="icon-tools"></i>
             </div>
           </div>
-          <div class="box ">
+          <div class="box">
             <div class="image space"></div>
-            <div class="pattern space">
+            <div ng-show="ragini1" ng-animate="{show:'up',hide:'down'}">
+            <div class="pattern space" ng-mouseover="ragini1=false" ng-mouseleave="ragini1=true" >
               <div class="heading">Focused people<br /> with focused process</div>
               <div class="descr">We believe in rapid prototyping i.e provide a user what is needed rather than what is written in contract.
               </div>
+            </div>
             </div>
             <div class="font-image">
               <i class="icon-target"></i>
             </div>
           </div>
-          <div class="box ">
+          <div class="box">
             <div class="image space"></div>
-            <div class="pattern space">
+            <div ng-hide="!ragini2" ng-animate="{show:'up',hide:'down'}">
+            <div class="pattern space" ng-mouseover="ragini2=false" ng-mouseleave="ragini2=true">
                <div class="heading">Passionate people<br /> who deliver quality</div>
                <div class="descr">We do not make just websites. We sit with you, figure out what your business exactly needs and then develop it for you.</div>
+            </div>
             </div>
             <div class="font-image margin">
               <i class="icon-users "></i>
@@ -139,13 +148,14 @@
         
       </div>      
   </div>
-  <div class="contact" style="display:none" class="animated fadeInDown" >
+  <div  class="contact" ng-show="!hidden" ng-animate="{show:'fadein_down',hide:'fadeout_up'}">
+    
     <div class="overlay"></div>
-    <div class="content-box">
+    <div class="content-box">      
       <div class="header">let us hear you</div>
       <div class="form">
-        <div class="close_btn">
-          <i class="icon-cancel-circled"></i>
+        <div class="close_btn" >
+          <i class="icon-cancel-circled" ng-click="hidden=true"></i>
         </div>
         <div class="column1">
           <textarea cols="50" rows="12" placeholder="What you have to say"></textarea>
@@ -159,8 +169,9 @@
       </div>
     </div>
   </div> 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>    
-    <script src="script.js"></script> 
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>    
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
 
